@@ -121,7 +121,7 @@ class GeneratorReport {
         doc.save('Anexo III - Relatório Diário de Controle de Hora Extra Excedente a 02 (Duas) Horas.pdf');
     }
 
-    static generatorReportTwo(nome, matricula, orgaoRequisitante, competencia, informacoesComplementares, infoTabela) {
+    static generatorReportTwo(nome, matricula, orgaoRequisitante, competencia, informacoesCompensacao, infoTabela) {
 
         var doc = new jsPDF({
             orientation: 'p',
@@ -258,7 +258,7 @@ class GeneratorReport {
         doc.cell(30, posicaoVertical, 160, 20, " ");
         doc.text('Informações sobre Compensação:', 33, posicaoVertical + 4);
         doc.setFontType('none');
-        doc.text(doc.splitTextToSize(informacoesComplementares), 33, posicaoVertical + 8);
+        doc.text(doc.splitTextToSize(informacoesCompensacao), 33, posicaoVertical + 8);
         posicaoVertical = posicaoVertical + 25;
 
         doc.setFontType("bold");

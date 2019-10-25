@@ -15,7 +15,7 @@ class ReportController {
         this._inputJustificativa = $('#justificativa');
         this._inputEspecificacao = $('#especificacao');
         this._inputServicoPrestado = $('#servicoPrestado');
-        this._inputInformacoesComplementares = $('#informacoesComplementares');
+        this._inputInformacoesCompensacao = $('#informacoesCompensacao');
         this._listReport = new ListReport();
 
         this._reportView = new ReportView($('#reportView'));
@@ -32,7 +32,7 @@ class ReportController {
 
     generatorDocument(){
         GeneratorReport.generatorReportThree(this._inputNome.value, this._inputMatricula.value, this._inputOrgaoRequisitante.value, this._inputCompetencia.value);
-        GeneratorReport.generatorReportTwo(this._inputNome.value, this._inputMatricula.value, this._inputOrgaoRequisitante.value,this._inputCompetencia.value, this._inputInformacoesComplementares.value, this._listReport);
+        GeneratorReport.generatorReportTwo(this._inputNome.value, this._inputMatricula.value, this._inputOrgaoRequisitante.value,this._inputCompetencia.value, this._inputInformacoesCompensacao.value, this._listReport);
         GeneratorReport.generatorReportOne(this._inputNome.value, this._inputMatricula.value, this._inputOrgaoRequisitante.value, this._listReport);
     }
 
